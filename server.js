@@ -6,9 +6,9 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import cors from "cors";
-import UserRouter from "./routes/UserRouter.js";
-import AuthRouter from "./routes/AuthRouter.js";
-import BlogRouter from "./routes/BlogRouter.js";
+// import UserRouter from "./routes/UserRouter.js";
+// import AuthRouter from "./routes/AuthRouter.js";
+// import BlogRouter from "./routes/BlogRouter.js";
 
 const corsOptions = {
   origin: "*",
@@ -22,9 +22,9 @@ app.use(cookieParser());
 app.use(cors(corsOptions));
 
 // routes
-app.use("/users", UserRouter);
-app.use("/auth", AuthRouter);
-app.use("/blogs", BlogRouter);
+// app.use("/users", UserRouter);
+// app.use("/auth", AuthRouter);
+// app.use("/blogs", BlogRouter);
 app.use((err, req, res, next) => {
   res.status(500).json({
     message: err.message,
