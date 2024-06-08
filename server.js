@@ -10,19 +10,16 @@ import UserRouter from "./routes/UserRouter.js";
 import AuthRouter from "./routes/AuthRouter.js";
 import BlogRouter from "./routes/BlogRouter.js";
 
-const options = [
-  cors({
-    origin: "*",
-    methods: "*",
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  }),
-];
-
+const corsOptions = {
+  origin: "*",
+  methods: "*",
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
 const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors(options));
+app.use(cors(corsOptions));
 
 // routes
 app.use("/users", UserRouter);
