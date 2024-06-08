@@ -47,9 +47,7 @@ db.once("open", function () {
 
 const port = process.env.PORT || 5050;
 app.get("/", (req, res) => {
-  res.json({
-    message: "Welcome to MSMG",
-  });
+  res.send("Hello World!");
 });
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
