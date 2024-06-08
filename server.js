@@ -46,7 +46,7 @@ db.once("open", function () {
 });
 
 const port = process.env.PORT || 5050;
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.json({
     message: "Welcome to MSMG",
   });
