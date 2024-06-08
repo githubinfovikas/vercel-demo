@@ -1,6 +1,6 @@
 "use strict";
 
-import userService from "../Services/UserService.js";
+import userService from "../services/UserService.js";
 import bcryptjs from "bcryptjs";
 import { CustomError } from "../utils/CustomError.js";
 import { CustomResponse } from "../utils/CusomResponse.js";
